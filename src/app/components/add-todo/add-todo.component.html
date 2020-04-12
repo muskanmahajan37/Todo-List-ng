@@ -1,0 +1,18 @@
+<div>
+    <form class="form" (ngSubmit)="onSubmit()">
+        <input type="text" name="title" [(ngModel)]="title" placeholder="Add Todo...">
+        
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</div>
+
+<!-- 
+    [(ngModel)], is called its a directive called ngModel which uses both brackets s its 2 way data binding
+                   to use ngModel we need Form module
+    
+    [(ngModel)]="title", title is declaired in add-todo.component.ts, and so we are binding it 2 way using ngModel
+
+    (ngSubmit), this is an event over submit, when we submit the form it calls onSubmit() in add-todo.component.ts
+
+    [( ngModel )] and ( ngSubmit ) these both are wrong
+ -->

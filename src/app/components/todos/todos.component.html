@@ -1,0 +1,26 @@
+<app-add-todo (addTodo)="addTodo($event)">
+</app-add-todo>
+
+<app-todo-item 
+    *ngFor="let todo of todos" 
+    [todo]="todo" 
+    (deleteTodo)="deleteTodo($event)"
+>
+</app-todo-item>
+
+<!-- above we are catching deleteTodo from todo-item.component.ts in "" is the method which will be 
+     called in todo.component we need to pass $event --> 
+<!-- above, passing todo as a property to app-todo-item  -->
+<!-- [to]="todo", where "todo" is written its the value of todos.compnent 
+                  and "to" is the "todo" property of todo-item.component -->
+                      
+<!-- [] is used when we need to output the data -->
+<!-- () is used when we need to input the data -->
+<!-- left side elemet is of other component and right side component is of todo.components.ts -->
+
+
+<!-- <div>
+    <ul *ngFor="let todo of todos">
+        <li>{{ todo.title }}</li>
+    </ul>
+</div>  -->
